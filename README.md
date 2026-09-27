@@ -154,6 +154,7 @@ The bridge translates Bootstrap design tokens into Salt design system variables 
 
 Detailed architectural specifications, knowledge guides, and audit reports are available in the [`docs/`](./docs) directory:
 - 👔 **[Executive Summary for Leadership](./docs/EXECUTIVE_SUMMARY.md)**: Simple, non-technical overview of the problem, solution, business value, and ROI.
+- ⚖️ **[Methodology & Architectural Justification](./docs/design_knowledge/METHODOLOGY_JUSTIFICATION_AND_TRADEOFFS.md)**: In-depth comparison of CSS Token Remapping vs. JS Component Adapters.
 - 💡 **[Design Knowledge Base](./docs/design_knowledge/README.md)**: Deep dive guides into Bootstrap 5 and Salt Design System architecture, tokens, and bridge patterns.
 - 📊 **[Component Parity & Verification Audit](./docs/PARITY_AND_VERIFICATION_REPORT.md)**: Test results, DOM computed value comparisons, and key architectural findings.
 - 📐 **[Low-Level Design (LLD)](./docs/design_review/salt-bootstrap-bridge-LLD.md)**: Deep architectural specifications for CSS variable token mapping.

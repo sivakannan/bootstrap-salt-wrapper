@@ -15,6 +15,13 @@ This directory contains comprehensive architectural reference guides, token docu
 - How to add new components to the showcase
 - Common tasks and CLI recipes
 
+### ⚖️ [Architectural Justification & Methodology Comparison](./METHODOLOGY_JUSTIFICATION_AND_TRADEOFFS.md)
+**Why we chose the Token Remapping Bridge over JS Component Adapters:**
+- Detailed comparison: Token Bridge vs Component Mapping Adapters
+- Why JS Adapters break down on complex components (Tables, Portals, Accordions)
+- The "100% Parity" boundary (Visual Theme vs Code Syntax)
+- Enterprise ROI and long-term maintenance analysis
+
 ### 1. 📘 [Bootstrap 5 Design System Guide](./bootstrap-design-system.md)
 Detailed architecture of Bootstrap 5.3+:
 - Core design tokens (`--bs-*`)
