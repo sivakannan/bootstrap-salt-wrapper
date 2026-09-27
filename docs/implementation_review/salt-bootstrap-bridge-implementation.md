@@ -2,8 +2,8 @@
 
 **Document Version:** 1.0  
 **Date:** 2026-09-27  
-**Status:** Ready for Implementation  
-**Related Design Doc:** [salt-bootstrap-bridge-LLD.md](file:///Users/sivakkannanr/.gemini/antigravity-ide/scratch/docs/design_review/salt-bootstrap-bridge-LLD.md)  
+**Status:** Implemented & Verified  
+**Related Design Doc:** [salt-bootstrap-bridge-LLD.md](../design_review/salt-bootstrap-bridge-LLD.md)  
 **Audience:** Frontend Developers implementing the bridge
 
 ---
