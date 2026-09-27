@@ -8,6 +8,8 @@
 
 A production-grade architecture demonstrating how enterprise applications built on **Bootstrap 5** can seamlessly integrate **J.P. Morgan's Salt Design System (`@salt-ds/core`)** via Microfrontends (Module Federation).
 
+> 👔 **Looking for a non-technical overview?** Read the [Executive Summary for Managers & Leadership](./docs/EXECUTIVE_SUMMARY.md).
+
 ---
 
 ## 🏛️ Architecture Overview
@@ -151,6 +153,7 @@ The bridge translates Bootstrap design tokens into Salt design system variables 
 ## 📚 Documentation
 
 Detailed architectural specifications, knowledge guides, and audit reports are available in the [`docs/`](./docs) directory:
+- 👔 **[Executive Summary for Leadership](./docs/EXECUTIVE_SUMMARY.md)**: Simple, non-technical overview of the problem, solution, business value, and ROI.
 - 💡 **[Design Knowledge Base](./docs/design_knowledge/README.md)**: Deep dive guides into Bootstrap 5 and Salt Design System architecture, tokens, and bridge patterns.
 - 📊 **[Component Parity & Verification Audit](./docs/PARITY_AND_VERIFICATION_REPORT.md)**: Test results, DOM computed value comparisons, and key architectural findings.
 - 📐 **[Low-Level Design (LLD)](./docs/design_review/salt-bootstrap-bridge-LLD.md)**: Deep architectural specifications for CSS variable token mapping.
