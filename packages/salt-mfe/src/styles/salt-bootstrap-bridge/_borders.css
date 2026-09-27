@@ -1,0 +1,16 @@
+.salt-bootstrap-compat {
+  --salt-curve-0:   0px;
+  --salt-curve-50:  1px;
+  --salt-curve-100: var(--bs-border-radius-sm, 0.25rem);
+  --salt-curve-150: var(--bs-border-radius, 0.375rem);
+  --salt-curve-200: var(--bs-border-radius, 0.375rem);
+  --salt-curve-250: var(--bs-border-radius, 0.375rem);
+  --salt-curve-300: var(--bs-border-radius-lg, 0.5rem);
+  --salt-curve-350: var(--bs-border-radius-lg, 0.5rem);
+  --salt-curve-999: var(--bs-border-radius-pill, 50rem);
+
+  --salt-size-border:          var(--bs-border-width, 1px);
+  --salt-size-border-strong:   2px;
+  --salt-borderStyle-default:  solid;
+  --salt-palette-neutral-border-default: var(--bs-border-color, #dee2e6);
+}

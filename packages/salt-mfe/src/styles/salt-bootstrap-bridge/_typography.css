@@ -1,0 +1,72 @@
+/*
+ * Salt-Bootstrap Bridge: Typography Token Mappings
+ * Maps Salt's font families, sizes, weights, and line-heights
+ * to Bootstrap 5's typography system.
+ */
+
+.salt-bootstrap-compat,
+.salt-bootstrap-compat [class*="salt-density-"],
+.salt-bootstrap-compat .salt-theme,
+.salt-bootstrap-compat.salt-theme {
+
+  /* ── Base Text Properties (Override Salt 12px desktop default to Bootstrap 1rem/16px) ── */
+  --salt-text-fontFamily:        var(--bs-body-font-family, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif);
+  --salt-text-action-fontFamily: var(--bs-body-font-family, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif);
+  --salt-text-code-fontFamily:   var(--bs-font-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace);
+  --salt-text-fontSize:          var(--bs-body-font-size, 1rem);
+  --salt-text-fontWeight:        var(--bs-body-font-weight, 400);
+  --salt-text-lineHeight:        var(--bs-body-line-height, 1.5);
+  --salt-text-letterSpacing:     0;
+  --salt-text-color:             var(--bs-body-color, #212529);
+
+  /* ── Override Salt's Named Font Families ── */
+  --salt-typography-fontFamily-openSans:  var(--bs-body-font-family, system-ui, -apple-system, sans-serif);
+  --salt-typography-fontFamily-amplitude: var(--bs-body-font-family, system-ui, -apple-system, sans-serif);
+  --salt-typography-fontFamily-ptMono:    var(--bs-font-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace);
+  --salt-palette-text-fontFamily:         var(--bs-body-font-family, system-ui, -apple-system, sans-serif);
+  --salt-palette-text-fontFamily-action:  var(--bs-body-font-family, system-ui, -apple-system, sans-serif);
+  --salt-palette-text-fontFamily-heading: var(--bs-body-font-family, system-ui, -apple-system, sans-serif);
+
+  /* ── Font Weight Scale ── */
+  --salt-typography-fontWeight-light:     300;
+  --salt-typography-fontWeight-regular:   var(--bs-body-font-weight, 400);
+  --salt-typography-fontWeight-medium:    500;
+  --salt-typography-fontWeight-semiBold:  600;
+  --salt-typography-fontWeight-bold:      700;
+  --salt-typography-fontWeight-extraBold: 800;
+
+  /* ── Heading Sizes (Bootstrap: h1=2.5rem, h2=2rem, h3=1.75rem, h4=1.5rem, h5=1.25rem, h6=1rem) ── */
+  --salt-text-h1-fontSize:    2.5rem;
+  --salt-text-h1-lineHeight:  1.2;
+  --salt-text-h1-fontWeight:  500;
+  --salt-text-h2-fontSize:    2rem;
+  --salt-text-h2-lineHeight:  1.2;
+  --salt-text-h2-fontWeight:  500;
+  --salt-text-h3-fontSize:    1.75rem;
+  --salt-text-h3-lineHeight:  1.2;
+  --salt-text-h3-fontWeight:  500;
+  --salt-text-h4-fontSize:    1.5rem;
+  --salt-text-h4-lineHeight:  1.2;
+  --salt-text-h4-fontWeight:  500;
+
+  /* ── Small / Caption / Label Text ── */
+  --salt-text-label-fontSize:    0.875rem;
+  --salt-text-label-lineHeight:  1.5;
+  --salt-text-notation-fontSize: 0.75rem;
+  --salt-text-notation-lineHeight: 1.5;
+}
+
+/* Enforce Bootstrap font-family and base font size across the wrapper */
+.salt-bootstrap-compat {
+  font-family: var(--bs-body-font-family, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif);
+  font-size: var(--bs-body-font-size, 1rem);
+  line-height: var(--bs-body-line-height, 1.5);
+  color: var(--bs-body-color, #212529);
+}
+
+.salt-bootstrap-compat button,
+.salt-bootstrap-compat input,
+.salt-bootstrap-compat select,
+.salt-bootstrap-compat textarea {
+  font-family: inherit;
+}

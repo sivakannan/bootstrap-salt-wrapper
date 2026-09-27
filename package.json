@@ -1,0 +1,41 @@
+{
+  "name": "bootstrap-salt-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:salt": "npm run dev --workspace=salt-mfe",
+    "dev:host": "npm run dev --workspace=bootstrap-host",
+    "build:salt": "npm run build --workspace=salt-mfe",
+    "build:host": "npm run build --workspace=bootstrap-host",
+    "preview:salt": "npm run preview --workspace=salt-mfe",
+    "dev": "concurrently -n \"SALT_MFE,HOST_APP\" -c \"magenta,blue\" \"npm run build:salt && npm run preview:salt\" \"npm run dev:host\"",
+    "start": "concurrently -n \"SALT_MFE,HOST_APP\" -c \"magenta,blue\" \"npm run build:salt && npm run preview:salt\" \"npm run dev:host\"",
+    "build": "npm run build --workspaces",
+    "test": "node tests/test-all-components.mjs",
+    "test:features": "node tests/verify-tabs-dialog-accordion-metrics.mjs"
+  },
+  "dependencies": {
+    "@fontsource/open-sans": "^5.3.0",
+    "@fontsource/pt-mono": "^5.3.0",
+    "@salt-ds/core": "^1.71.0",
+    "@salt-ds/icons": "^1.18.2",
+    "@salt-ds/theme": "^1.46.0",
+    "bootstrap": "^5.3.8",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@originjs/vite-plugin-federation": "^1.4.1",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "concurrently": "^9.2.1",
+    "playwright": "^1.63.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.1"
+  }
+}

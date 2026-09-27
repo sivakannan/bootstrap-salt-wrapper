@@ -1,0 +1,38 @@
+/* Dark mode via Bootstrap theme attribute */
+[data-bs-theme="dark"] .salt-bootstrap-compat,
+.salt-bootstrap-compat[data-mode="dark"] {
+  --salt-container-primary-background:     var(--bs-body-bg, #212529);
+  --salt-container-primary-borderColor:    var(--bs-border-color, #495057);
+  --salt-container-secondary-background:   var(--bs-secondary-bg, #343a40);
+  --salt-container-secondary-borderColor:  var(--bs-border-color, #495057);
+  --salt-container-tertiary-background:    var(--bs-tertiary-bg, #2b3035);
+
+  --salt-content-primary-foreground:       var(--bs-body-color, #dee2e6);
+  --salt-content-secondary-foreground:     var(--bs-secondary-color, #adb5bd);
+  --salt-content-tertiary-foreground:      var(--bs-tertiary-color, #6c757d);
+  --salt-content-primary-background:       var(--bs-body-bg, #212529);
+
+  --salt-actionable-bold-background:       var(--bs-primary, #0d6efd);
+  --salt-actionable-bold-foreground:       #ffffff;
+  --salt-actionable-primary-background:    var(--bs-primary, #0d6efd);
+  --salt-actionable-primary-foreground:    #ffffff;
+  --salt-actionable-secondary-foreground:  #6ea8fe;
+  --salt-actionable-secondary-borderColor: #6ea8fe;
+  --salt-actionable-secondary-background-hover: rgba(110, 168, 254, 0.1);
+  --salt-actionable-subtle-foreground:     #6ea8fe;
+  --salt-actionable-subtle-borderColor:    #6ea8fe;
+
+  --salt-editable-primary-background:         var(--bs-body-bg, #212529);
+  --salt-editable-primary-borderColor:        var(--bs-border-color, #495057);
+  --salt-editable-primary-borderColor-active: var(--bs-primary, #0d6efd);
+
+  --salt-overlayable-background:   var(--bs-body-bg, #212529);
+  --salt-overlayable-borderColor:  var(--bs-border-color, #495057);
+}
+
+/* Dark mode via Salt's own attribute inside compat */
+.salt-bootstrap-compat [data-mode="dark"] {
+  --salt-container-primary-background:     var(--bs-body-bg, #212529);
+  --salt-content-primary-foreground:       var(--bs-body-color, #dee2e6);
+  --salt-content-secondary-foreground:     var(--bs-secondary-color, #adb5bd);
+}

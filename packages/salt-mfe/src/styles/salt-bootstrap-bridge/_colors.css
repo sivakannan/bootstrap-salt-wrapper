@@ -1,0 +1,157 @@
+.salt-bootstrap-compat {
+
+  /* ════════════════════════════════════════════════════════════════
+   * ACTIONABLE — Buttons, Links, Interactive Elements
+   * Remapped to Bootstrap 5 CSS variables
+   * ════════════════════════════════════════════════════════════════ */
+
+  /* ── Salt 1.71 Button Solid Neutral & Primary mappings ── */
+  --salt-actionable-bold-background:             var(--bs-primary, #0d6efd);
+  --salt-actionable-bold-background-hover:       var(--bs-primary-hover, #0b5ed7);
+  --salt-actionable-bold-background-active:      #0a58ca;
+  --salt-actionable-bold-background-disabled:    var(--bs-secondary-bg, #e9ecef);
+  --salt-actionable-bold-foreground:             #ffffff;
+  --salt-actionable-bold-foreground-hover:       #ffffff;
+  --salt-actionable-bold-foreground-active:      #ffffff;
+  --salt-actionable-bold-foreground-disabled:    var(--bs-secondary-color, #6c757d);
+  --salt-actionable-bold-borderColor:            var(--bs-primary, #0d6efd);
+  --salt-actionable-bold-borderColor-hover:      var(--bs-primary-hover, #0b5ed7);
+  --salt-actionable-bold-borderColor-active:     #0a58ca;
+  --salt-actionable-bold-borderColor-disabled:   var(--bs-secondary-bg, #e9ecef);
+
+  /* ── Primary Actions ── */
+  --salt-actionable-primary-background:          var(--bs-primary, #0d6efd);
+  --salt-actionable-primary-background-hover:    var(--bs-primary-hover, #0b5ed7);
+  --salt-actionable-primary-background-active:   #0a58ca;
+  --salt-actionable-primary-background-disabled: var(--bs-secondary-bg, #e9ecef);
+  --salt-actionable-primary-foreground:          #ffffff;
+  --salt-actionable-primary-foreground-hover:    #ffffff;
+  --salt-actionable-primary-foreground-active:   #ffffff;
+  --salt-actionable-primary-foreground-disabled: var(--bs-secondary-color, #6c757d);
+  --salt-actionable-primary-borderColor:         var(--bs-primary, #0d6efd);
+  --salt-actionable-primary-borderColor-hover:   var(--bs-primary-hover, #0b5ed7);
+  --salt-actionable-primary-borderColor-active:  #0a58ca;
+  --salt-actionable-primary-borderColor-disabled: var(--bs-secondary-bg, #e9ecef);
+
+  /* ── Secondary / Subtle Actions (Outline buttons) ── */
+  --salt-actionable-subtle-background:           transparent;
+  --salt-actionable-subtle-background-hover:     rgba(13, 110, 253, 0.08);
+  --salt-actionable-subtle-background-active:    rgba(13, 110, 253, 0.15);
+  --salt-actionable-subtle-background-disabled:  transparent;
+  --salt-actionable-subtle-foreground:           var(--bs-primary, #0d6efd);
+  --salt-actionable-subtle-foreground-hover:     var(--bs-primary, #0d6efd);
+  --salt-actionable-subtle-foreground-active:    var(--bs-primary, #0d6efd);
+  --salt-actionable-subtle-foreground-disabled:  var(--bs-secondary-color, #6c757d);
+  --salt-actionable-subtle-borderColor:          var(--bs-primary, #0d6efd);
+  --salt-actionable-subtle-borderColor-hover:    var(--bs-primary-hover, #0b5ed7);
+  --salt-actionable-subtle-borderColor-active:   #0a58ca;
+
+  --salt-actionable-secondary-background:          transparent;
+  --salt-actionable-secondary-background-hover:    rgba(13, 110, 253, 0.08);
+  --salt-actionable-secondary-background-active:   rgba(13, 110, 253, 0.15);
+  --salt-actionable-secondary-background-disabled: transparent;
+  --salt-actionable-secondary-foreground:          var(--bs-primary, #0d6efd);
+  --salt-actionable-secondary-foreground-hover:    var(--bs-primary, #0d6efd);
+  --salt-actionable-secondary-foreground-active:   var(--bs-primary, #0d6efd);
+  --salt-actionable-secondary-foreground-disabled: var(--bs-secondary-color, #6c757d);
+  --salt-actionable-secondary-borderColor:         var(--bs-primary, #0d6efd);
+  --salt-actionable-secondary-borderColor-hover:   var(--bs-primary-hover, #0b5ed7);
+  --salt-actionable-secondary-borderColor-disabled: var(--bs-secondary-bg, #e9ecef);
+
+  /* ── Accented Actions ── */
+  --salt-actionable-accented-background:          var(--bs-primary, #0d6efd);
+  --salt-actionable-accented-background-hover:    var(--bs-primary-hover, #0b5ed7);
+  --salt-actionable-accented-foreground:          #ffffff;
+  --salt-actionable-accented-bold-background:     var(--bs-success, #198754);
+  --salt-actionable-accented-bold-background-hover: #157347;
+  --salt-actionable-accented-bold-background-active: #146c43;
+  --salt-actionable-accented-bold-foreground:     #ffffff;
+  --salt-actionable-accented-bold-borderColor:    var(--bs-success, #198754);
+
+  /* ── CTA / Positive Actions ── */
+  --salt-actionable-cta-background:               var(--bs-success, #198754);
+  --salt-actionable-cta-background-hover:         #157347;
+  --salt-actionable-cta-background-active:        #146c43;
+  --salt-actionable-cta-background-disabled:      var(--bs-secondary-bg, #e9ecef);
+  --salt-actionable-cta-foreground:               #ffffff;
+  --salt-actionable-cta-foreground-hover:         #ffffff;
+  --salt-actionable-cta-foreground-active:        #ffffff;
+  --salt-actionable-cta-foreground-disabled:      var(--bs-secondary-color, #6c757d);
+  --salt-actionable-cta-borderColor:             var(--bs-success, #198754);
+
+  --salt-actionable-positive-bold-background:     var(--bs-success, #198754);
+  --salt-actionable-positive-bold-background-hover: #157347;
+  --salt-actionable-positive-bold-foreground:     #ffffff;
+  --salt-actionable-positive-bold-borderColor:    var(--bs-success, #198754);
+
+  /* ════════════════════════════════════════════════════════════════
+   * CONTAINER — Cards, Panels, Dialogs, Surfaces
+   * ════════════════════════════════════════════════════════════════ */
+
+  --salt-container-primary-background:        var(--bs-body-bg, #ffffff);
+  --salt-container-primary-borderColor:       var(--bs-border-color, #dee2e6);
+  --salt-container-primary-borderColor-hover: var(--bs-border-color-translucent, rgba(0, 0, 0, 0.175));
+  --salt-container-secondary-background:      var(--bs-secondary-bg, #e9ecef);
+  --salt-container-secondary-borderColor:     var(--bs-border-color, #dee2e6);
+  --salt-container-tertiary-background:       var(--bs-tertiary-bg, #f8f9fa);
+  --salt-container-tertiary-borderColor:      var(--bs-border-color, #dee2e6);
+
+  /* ════════════════════════════════════════════════════════════════
+   * CONTENT — Text, Icons, Foreground Elements
+   * ════════════════════════════════════════════════════════════════ */
+
+  --salt-content-primary-foreground:      var(--bs-body-color, #212529);
+  --salt-content-secondary-foreground:    var(--bs-secondary-color, #6c757d);
+  --salt-content-tertiary-foreground:     var(--bs-tertiary-color, #adb5bd);
+  --salt-content-primary-background:      var(--bs-body-bg, #ffffff);
+  --salt-content-secondary-background:    var(--bs-secondary-bg, #e9ecef);
+
+  /* ════════════════════════════════════════════════════════════════
+   * NAVIGABLE — Navigation elements, tabs, breadcrumbs
+   * ════════════════════════════════════════════════════════════════ */
+
+  --salt-navigable-background:            transparent;
+  --salt-navigable-background-hover:      rgba(13, 110, 253, 0.06);
+  --salt-navigable-background-active:     rgba(13, 110, 253, 0.1);
+  --salt-navigable-foreground:            var(--bs-body-color, #212529);
+  --salt-navigable-foreground-hover:      var(--bs-primary, #0d6efd);
+  --salt-navigable-foreground-active:     var(--bs-primary, #0d6efd);
+  --salt-navigable-indicator-activeColor: var(--bs-primary, #0d6efd);
+
+  /* ════════════════════════════════════════════════════════════════
+   * EDITABLE — Input fields, text areas, dropdowns
+   * ════════════════════════════════════════════════════════════════ */
+
+  --salt-editable-primary-background:          var(--bs-body-bg, #ffffff);
+  --salt-editable-primary-background-hover:    var(--bs-body-bg, #ffffff);
+  --salt-editable-primary-background-active:   var(--bs-body-bg, #ffffff);
+  --salt-editable-primary-background-disabled: var(--bs-secondary-bg, #e9ecef);
+  --salt-editable-primary-background-readonly: var(--bs-tertiary-bg, #f8f9fa);
+  --salt-editable-primary-borderColor:         var(--bs-border-color, #dee2e6);
+  --salt-editable-primary-borderColor-hover:   var(--bs-border-color, #dee2e6);
+  --salt-editable-primary-borderColor-active:  var(--bs-primary, #0d6efd);
+  --salt-editable-primary-borderColor-disabled: var(--bs-border-color, #dee2e6);
+  --salt-editable-borderColor:                 var(--bs-border-color, #dee2e6);
+  --salt-editable-borderColor-hover:           var(--bs-border-color, #dee2e6);
+  --salt-editable-borderColor-active:          var(--bs-primary, #0d6efd);
+
+  /* ════════════════════════════════════════════════════════════════
+   * SELECTABLE — Checkboxes, radio buttons, list selection
+   * ════════════════════════════════════════════════════════════════ */
+
+  --salt-selectable-background:          transparent;
+  --salt-selectable-background-hover:    rgba(13, 110, 253, 0.06);
+  --salt-selectable-background-selected: rgba(13, 110, 253, 0.1);
+  --salt-selectable-background-selectedHover: rgba(13, 110, 253, 0.15);
+  --salt-selectable-foreground:          var(--bs-body-color, #212529);
+  --salt-selectable-foreground-hover:    var(--bs-body-color, #212529);
+  --salt-selectable-foreground-selected: var(--bs-primary, #0d6efd);
+  --salt-selectable-borderColor-selected: var(--bs-primary, #0d6efd);
+
+  /* ════════════════════════════════════════════════════════════════
+   * OVERLAYABLE — Dropdowns, popovers, tooltips
+   * ════════════════════════════════════════════════════════════════ */
+
+  --salt-overlayable-background:   var(--bs-body-bg, #ffffff);
+  --salt-overlayable-borderColor:  var(--bs-border-color, #dee2e6);
+}

@@ -1,0 +1,7 @@
+.salt-bootstrap-compat {
+  --salt-overlayable-shadow-scroll:     var(--bs-box-shadow-sm, 0 .125rem .25rem rgba(0, 0, 0, .075));
+  --salt-overlayable-shadow-default:    var(--bs-box-shadow, 0 .5rem 1rem rgba(0, 0, 0, .15));
+  --salt-overlayable-shadow-region:     var(--bs-box-shadow, 0 .5rem 1rem rgba(0, 0, 0, .15));
+  --salt-overlayable-shadow-overlay:    var(--bs-box-shadow-lg, 0 1rem 3rem rgba(0, 0, 0, .175));
+  --salt-overlayable-shadow-none:       none;
+}

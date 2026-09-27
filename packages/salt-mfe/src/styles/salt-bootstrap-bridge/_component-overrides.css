@@ -1,0 +1,681 @@
+/* ── Z-Index Alignment ── */
+.salt-bootstrap-compat {
+  --salt-zIndex-default:       auto;
+  --salt-zIndex-appHeader:     var(--bs-zindex-sticky, 1020);
+  --salt-zIndex-popout:        var(--bs-zindex-dropdown, 1000);
+  --salt-zIndex-floating:      var(--bs-zindex-popover, 1070);
+  --salt-zIndex-overlay:       var(--bs-zindex-modal, 1055);
+  --salt-zIndex-notification:  var(--bs-zindex-toast, 1090);
+}
+
+/* ── Focus Ring (match Bootstrap's) ── */
+.salt-bootstrap-compat {
+  --salt-focused-outlineColor:  var(--bs-focus-ring-color, rgba(13, 110, 253, 0.25));
+  --salt-focused-outlineWidth:  var(--bs-focus-ring-width, 0.25rem);
+  --salt-focused-outlineStyle:  solid;
+  --salt-focused-outlineOffset: 0;
+  --saltButton-borderRadius:    var(--bs-border-radius, 0.375rem);
+}
+
+/* ══════════════════════════════════════════════════════════════════
+ * BUTTON OVERRIDES (Match Bootstrap .btn)
+ * ══════════════════════════════════════════════════════════════════ */
+.salt-bootstrap-compat .saltButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  height: auto;
+  min-height: calc(1.5em + 0.75rem + 2px);
+  border-radius: var(--bs-border-radius, 0.375rem);
+  border-width: var(--bs-border-width, 1px);
+  border-style: solid;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.15s ease-in-out,
+              background-color 0.15s ease-in-out,
+              border-color 0.15s ease-in-out,
+              box-shadow 0.15s ease-in-out;
+}
+
+/* Primary Button */
+.salt-bootstrap-compat .saltButton.saltButton-primary,
+.salt-bootstrap-compat .saltButton.saltButton-solid.saltButton-neutral {
+  background-color: var(--bs-primary, #0d6efd);
+  border-color: var(--bs-primary, #0d6efd);
+  color: #ffffff;
+}
+
+.salt-bootstrap-compat .saltButton.saltButton-primary:hover,
+.salt-bootstrap-compat .saltButton.saltButton-solid.saltButton-neutral:hover {
+  background-color: var(--bs-primary-hover, #0b5ed7);
+  border-color: var(--bs-primary-hover, #0a58ca);
+  color: #ffffff;
+}
+
+.salt-bootstrap-compat .saltButton.saltButton-primary:active,
+.salt-bootstrap-compat .saltButton.saltButton-solid.saltButton-neutral:active {
+  background-color: #0a58ca;
+  border-color: #0a53be;
+  color: #ffffff;
+}
+
+.salt-bootstrap-compat .saltButton.saltButton-primary:focus-visible,
+.salt-bootstrap-compat .saltButton.saltButton-solid.saltButton-neutral:focus-visible {
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.5);
+}
+
+/* Secondary Button (Outline Style in Bootstrap) */
+.salt-bootstrap-compat .saltButton.saltButton-secondary,
+.salt-bootstrap-compat .saltButton.saltButton-transparent.saltButton-neutral {
+  background-color: transparent;
+  border-color: var(--bs-primary, #0d6efd);
+  color: var(--bs-primary, #0d6efd);
+}
+
+.salt-bootstrap-compat .saltButton.saltButton-secondary:hover,
+.salt-bootstrap-compat .saltButton.saltButton-transparent.saltButton-neutral:hover {
+  background-color: var(--bs-primary, #0d6efd);
+  border-color: var(--bs-primary, #0d6efd);
+  color: #ffffff;
+}
+
+.salt-bootstrap-compat .saltButton.saltButton-secondary:active,
+.salt-bootstrap-compat .saltButton.saltButton-transparent.saltButton-neutral:active {
+  background-color: #0a58ca;
+  border-color: #0a53be;
+  color: #ffffff;
+}
+
+.salt-bootstrap-compat .saltButton.saltButton-secondary:focus-visible,
+.salt-bootstrap-compat .saltButton.saltButton-transparent.saltButton-neutral:focus-visible {
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.5);
+}
+
+/* CTA / Success Button */
+.salt-bootstrap-compat .saltButton.saltButton-cta,
+.salt-bootstrap-compat .saltButton.saltButton-solid.saltButton-accented {
+  background-color: var(--bs-success, #198754);
+  border-color: var(--bs-success, #198754);
+  color: #ffffff;
+}
+
+.salt-bootstrap-compat .saltButton.saltButton-cta:hover,
+.salt-bootstrap-compat .saltButton.saltButton-solid.saltButton-accented:hover {
+  background-color: #157347;
+  border-color: #146c43;
+  color: #ffffff;
+}
+
+.salt-bootstrap-compat .saltButton.saltButton-cta:active,
+.salt-bootstrap-compat .saltButton.saltButton-solid.saltButton-accented:active {
+  background-color: #146c43;
+  border-color: #13653f;
+  color: #ffffff;
+}
+
+.salt-bootstrap-compat .saltButton.saltButton-cta:focus-visible,
+.salt-bootstrap-compat .saltButton.saltButton-solid.saltButton-accented:focus-visible {
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.5);
+}
+
+/* Button Sizes */
+.salt-bootstrap-compat .saltButton[data-size="small"] {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  min-height: calc(1.5em + 0.5rem + 2px);
+  border-radius: var(--bs-border-radius-sm, 0.25rem);
+}
+
+.salt-bootstrap-compat .saltButton[data-size="large"] {
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  min-height: calc(1.5em + 1rem + 2px);
+  border-radius: var(--bs-border-radius-lg, 0.5rem);
+}
+
+/* ══════════════════════════════════════════════════════════════════
+ * INPUT OVERRIDES (Match Bootstrap .form-control)
+ * ══════════════════════════════════════════════════════════════════ */
+.salt-bootstrap-compat .saltInput {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--bs-body-color, #212529);
+  background-color: var(--bs-body-bg, #ffffff);
+  background-clip: padding-box;
+  border: var(--bs-border-width, 1px) solid var(--bs-border-color, #dee2e6);
+  border-radius: var(--bs-border-radius, 0.375rem);
+  height: auto;
+  min-height: calc(1.5em + 0.75rem + 2px);
+  box-shadow: none;
+  box-sizing: border-box;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+/* Inner native input reset */
+.salt-bootstrap-compat .saltInput .saltInput-input {
+  display: block;
+  width: 100%;
+  padding: 0;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 400;
+  line-height: 1.5;
+  color: inherit;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+}
+
+/* Hide Salt underline indicator since Bootstrap uses full 4-sided border */
+.salt-bootstrap-compat .saltInput .saltInput-activationIndicator {
+  display: none !important;
+}
+
+/* Input Focus State (Matches Bootstrap glow) */
+.salt-bootstrap-compat .saltInput:focus-within,
+.salt-bootstrap-compat .saltInput.saltInput-focused {
+  color: var(--bs-body-color, #212529);
+  background-color: var(--bs-body-bg, #ffffff);
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Dark mode adjustments for input focus */
+[data-bs-theme="dark"] .salt-bootstrap-compat .saltInput:focus-within,
+[data-bs-theme="dark"] .salt-bootstrap-compat .saltInput.saltInput-focused {
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* ══════════════════════════════════════════════════════════════════
+ * CARD OVERRIDES (Match Bootstrap .card)
+ * ══════════════════════════════════════════════════════════════════ */
+.salt-bootstrap-compat .saltCard {
+  background-color: var(--bs-body-bg, #ffffff);
+  border: var(--bs-border-width, 1px) solid var(--bs-border-color, #dee2e6);
+  border-radius: var(--bs-border-radius, 0.375rem);
+  box-shadow: none;
+  padding: 1rem;
+  font-size: var(--bs-body-font-size, 1rem);
+  line-height: var(--bs-body-line-height, 1.5);
+  color: var(--bs-body-color, #212529);
+}
+
+.salt-bootstrap-compat .saltCard.bg-body-tertiary,
+.salt-bootstrap-compat .saltCard[data-variant="tertiary"] {
+  background-color: var(--bs-tertiary-bg, #f8f9fa);
+}
+
+/* ══════════════════════════════════════════════════════════════════
+ * CHECKBOX & RADIO (Match Bootstrap .form-check)
+ * ══════════════════════════════════════════════════════════════════ */
+.salt-bootstrap-compat .saltCheckbox {
+  cursor: pointer;
+}
+
+.salt-bootstrap-compat .saltCheckboxIcon {
+  border-radius: var(--bs-border-radius-sm, 0.25rem);
+  border: var(--bs-border-width, 1px) solid var(--bs-border-color, #dee2e6);
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+.salt-bootstrap-compat .saltCheckbox-checked .saltCheckboxIcon {
+  background-color: var(--bs-primary, #0d6efd);
+  border-color: var(--bs-primary, #0d6efd);
+  color: #ffffff;
+}
+
+.salt-bootstrap-compat .saltRadioButtonIcon {
+  border-radius: 50%;
+  border: var(--bs-border-width, 1px) solid var(--bs-border-color, #dee2e6);
+}
+
+.salt-bootstrap-compat .saltRadioButton-checked .saltRadioButtonIcon {
+  border-color: var(--bs-primary, #0d6efd);
+  color: var(--bs-primary, #0d6efd);
+}
+
+/* ══════════════════════════════════════════════════════════════════
+ * SWITCH (Match Bootstrap .form-switch)
+ * ══════════════════════════════════════════════════════════════════ */
+.salt-bootstrap-compat .saltSwitch {
+  cursor: pointer;
+}
+
+.salt-bootstrap-compat .saltSwitch-track {
+  border-radius: 2rem;
+  background-color: var(--bs-secondary-bg, #e9ecef);
+  border: var(--bs-border-width, 1px) solid var(--bs-border-color, #dee2e6);
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+.salt-bootstrap-compat .saltSwitch-checked .saltSwitch-track {
+  background-color: var(--bs-primary, #0d6efd);
+  border-color: var(--bs-primary, #0d6efd);
+}
+
+.salt-bootstrap-compat .saltSwitch-thumb {
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* ══════════════════════════════════════════════════════════════════
+ * DROPDOWN / COMBOBOX (Match Bootstrap .form-select)
+ * ══════════════════════════════════════════════════════════════════ */
+.salt-bootstrap-compat .saltDropdown,
+.salt-bootstrap-compat .saltComboBox {
+  border: var(--bs-border-width, 1px) solid var(--bs-border-color, #dee2e6);
+  border-radius: var(--bs-border-radius, 0.375rem);
+  background-color: var(--bs-body-bg, #ffffff);
+  color: var(--bs-body-color, #212529);
+  min-height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  box-shadow: none;
+}
+
+.salt-bootstrap-compat .saltDropdown:focus-within,
+.salt-bootstrap-compat .saltComboBox:focus-within {
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  outline: 0;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+ * TABS (Match Bootstrap nav-tabs / nav-underline)
+ * ══════════════════════════════════════════════════════════════════ */
+.salt-bootstrap-compat .saltTab {
+  font-family: var(--bs-body-font-family);
+  font-size: 0.925rem;
+  font-weight: 500;
+  color: var(--bs-secondary-color, #6c757d);
+  padding: 0.4rem 0.75rem;
+  white-space: nowrap;
+}
+
+.salt-bootstrap-compat .saltTab[aria-selected="true"] {
+  color: var(--bs-primary, #0d6efd);
+}
+
+.salt-bootstrap-compat .saltTabStrip-activationIndicator {
+  background-color: var(--bs-primary, #0d6efd);
+  height: 2px;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+ * ACCORDION (Match Bootstrap .accordion)
+ * ══════════════════════════════════════════════════════════════════ */
+.salt-bootstrap-compat .saltAccordion {
+  border: var(--bs-border-width, 1px) solid var(--bs-border-color, #dee2e6);
+  border-radius: var(--bs-border-radius, 0.375rem);
+  overflow: hidden;
+}
+
+.salt-bootstrap-compat .saltAccordionHeader {
+  background-color: var(--bs-body-bg, #ffffff);
+  color: var(--bs-body-color, #212529);
+  padding: 0.75rem 1rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.salt-bootstrap-compat .saltAccordionHeader:hover {
+  background-color: var(--bs-tertiary-bg, #f8f9fa);
+}
+
+.salt-bootstrap-compat .saltAccordionHeader[aria-expanded="true"] {
+  background-color: var(--bs-primary-bg-subtle, #cfe2ff);
+  color: var(--bs-primary-text-emphasis, #0a58ca);
+}
+
+[data-bs-theme="dark"] .salt-bootstrap-compat .saltAccordionHeader[aria-expanded="true"] {
+  background-color: rgba(13, 110, 253, 0.2);
+  color: #6ea8fe;
+}
+
+.salt-bootstrap-compat .saltAccordionPanel {
+  padding: 1rem;
+  background-color: var(--bs-body-bg, #ffffff);
+  border-top: var(--bs-border-width, 1px) solid var(--bs-border-color, #dee2e6);
+}
+
+/* ══════════════════════════════════════════════════════════════════
+ * TABLE (Match Bootstrap .table, .table-hover, .table-bordered)
+ * ══════════════════════════════════════════════════════════════════ */
+.salt-bootstrap-compat .saltTable {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: var(--bs-body-color, #212529);
+  vertical-align: top;
+  border-color: var(--bs-border-color, #dee2e6);
+  border-collapse: collapse;
+}
+
+.salt-bootstrap-compat .saltTableContainer {
+  border: var(--bs-border-width, 1px) solid var(--bs-border-color, #dee2e6);
+  border-radius: var(--bs-border-radius, 0.375rem);
+  overflow: hidden;
+  background-color: var(--bs-body-bg, #ffffff);
+}
+
+.salt-bootstrap-compat .saltTable-th,
+.salt-bootstrap-compat .saltTH,
+.salt-bootstrap-compat th {
+  border-bottom: 2px solid var(--bs-border-color, #dee2e6);
+  padding: 0.6rem 0.85rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-align: left;
+  background-color: var(--bs-tertiary-bg, #f8f9fa);
+  color: var(--bs-body-color, #212529);
+}
+
+.salt-bootstrap-compat .saltTable-td,
+.salt-bootstrap-compat .saltTD,
+.salt-bootstrap-compat td {
+  border-bottom: 1px solid var(--bs-border-color, #dee2e6);
+  padding: 0.6rem 0.85rem;
+  font-size: 0.875rem;
+  vertical-align: middle;
+  color: var(--bs-body-color, #212529);
+}
+
+.salt-bootstrap-compat .saltTable-tr:hover td,
+.salt-bootstrap-compat .saltTR:hover .saltTD,
+.salt-bootstrap-compat tr:hover td {
+  background-color: var(--bs-tertiary-bg, rgba(0, 0, 0, 0.035));
+}
+
+/* ══════════════════════════════════════════════════════════════════
+ * MULTILINE INPUT (Match Bootstrap .form-control textarea)
+ * ══════════════════════════════════════════════════════════════════ */
+.salt-bootstrap-compat .saltMultilineInput {
+  border: var(--bs-border-width, 1px) solid var(--bs-border-color, #dee2e6);
+  border-radius: var(--bs-border-radius, 0.375rem);
+  background-color: var(--bs-body-bg, #ffffff);
+  color: var(--bs-body-color, #212529);
+  padding: 0.375rem 0.75rem;
+  box-sizing: border-box;
+  width: 100%;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.salt-bootstrap-compat .saltMultilineInput textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  resize: vertical;
+}
+
+.salt-bootstrap-compat .saltMultilineInput:focus-within {
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* ══════════════════════════════════════════════════════════════════
+ * LINEAR PROGRESS (Match Bootstrap .progress & .progress-bar)
+ * ══════════════════════════════════════════════════════════════════ */
+.salt-bootstrap-compat .saltLinearProgress {
+  height: 0.75rem;
+  border-radius: var(--bs-border-radius, 0.375rem);
+  background-color: var(--bs-secondary-bg, #e9ecef);
+  overflow: hidden;
+}
+
+.salt-bootstrap-compat .saltLinearProgress-bar {
+  background-color: var(--bs-primary, #0d6efd);
+  transition: width 0.6s ease;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+ * BADGES, PILLS & TAGS (Match Bootstrap .badge, .rounded-pill)
+ * ══════════════════════════════════════════════════════════════════ */
+.salt-bootstrap-compat .saltBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35em 0.65em;
+  font-size: 0.75em;
+  font-weight: 700;
+  border-radius: var(--bs-border-radius-pill, 50rem);
+  background-color: var(--bs-primary, #0d6efd);
+  color: #ffffff;
+}
+
+.salt-bootstrap-compat .saltPill {
+  border-radius: 50rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  background-color: var(--bs-tertiary-bg, #f8f9fa);
+  border: 1px solid var(--bs-border-color, #dee2e6);
+  color: var(--bs-body-color, #212529);
+}
+
+.salt-bootstrap-compat .saltTag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25em 0.65em;
+  font-size: 0.75em;
+  font-weight: 600;
+  border-radius: var(--bs-border-radius-sm, 0.25rem);
+  background-color: var(--bs-secondary-bg, #e9ecef);
+  color: var(--bs-body-color, #212529);
+  border: 1px solid var(--bs-border-color, #dee2e6);
+}
+
+/* ══════════════════════════════════════════════════════════════════
+ * BREADCRUMBS (Match Bootstrap .breadcrumb)
+ * ══════════════════════════════════════════════════════════════════ */
+.salt-bootstrap-compat .saltBreadcrumbs {
+  font-family: var(--bs-body-font-family);
+  font-size: 0.875rem;
+  color: var(--bs-secondary-color, #6c757d);
+}
+
+.salt-bootstrap-compat .saltBreadcrumb {
+  color: var(--bs-primary, #0d6efd);
+}
+
+.salt-bootstrap-compat .saltBreadcrumb[aria-current="page"] {
+  color: var(--bs-secondary-color, #6c757d);
+}
+
+/* ══════════════════════════════════════════════════════════════════
+ * SEGMENTED BUTTON GROUP (Match Bootstrap .btn-group)
+ * ══════════════════════════════════════════════════════════════════ */
+.salt-bootstrap-compat .saltSegmentedButtonGroup {
+  display: inline-flex;
+  border-radius: var(--bs-border-radius, 0.375rem);
+  border: 1px solid var(--bs-border-color, #dee2e6);
+  overflow: hidden;
+}
+
+.salt-bootstrap-compat .saltSegmentedButtonGroup .saltButton {
+  border-radius: 0;
+  border: none;
+  border-right: 1px solid var(--bs-border-color, #dee2e6);
+  background-color: var(--bs-body-bg, #ffffff);
+  color: var(--bs-body-color, #212529);
+  font-size: 0.875rem;
+  padding: 0.3rem 0.65rem;
+}
+
+.salt-bootstrap-compat .saltSegmentedButtonGroup .saltButton:last-child {
+  border-right: none;
+}
+
+.salt-bootstrap-compat .saltSegmentedButtonGroup .saltButton:hover {
+  background-color: var(--bs-tertiary-bg, #f8f9fa);
+}
+
+/* ══════════════════════════════════════════════════════════════════
+ * DIALOG / MODAL (Match Bootstrap .modal only when .salt-bootstrap-compat is active)
+ * ══════════════════════════════════════════════════════════════════ */
+.salt-bootstrap-compat.saltDialog,
+.salt-bootstrap-compat .saltDialog {
+  background-color: var(--bs-body-bg, #ffffff);
+  color: var(--bs-body-color, #212529);
+  border: var(--bs-border-width, 1px) solid var(--bs-border-color, #dee2e6);
+  border-radius: var(--bs-border-radius-lg, 0.5rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  font-family: var(--bs-body-font-family);
+  max-width: 500px;
+}
+
+.salt-bootstrap-compat.saltDialog .saltDialogHeader,
+.salt-bootstrap-compat .saltDialogHeader {
+  border-bottom: 1px solid var(--bs-border-color, #dee2e6);
+  padding: 1rem 1.25rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.salt-bootstrap-compat.saltDialog .saltDialogContent,
+.salt-bootstrap-compat .saltDialogContent {
+  padding: 1.25rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.salt-bootstrap-compat.saltDialog .saltDialogActions,
+.salt-bootstrap-compat .saltDialogActions {
+  border-top: 1px solid var(--bs-border-color, #dee2e6);
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.salt-bootstrap-compat.saltDialog .saltButton.saltButton-primary,
+.salt-bootstrap-compat.saltDialog .saltButton.saltButton-solid.saltButton-neutral,
+.salt-bootstrap-compat .saltDialog .saltButton.saltButton-primary,
+.salt-bootstrap-compat .saltDialog .saltButton.saltButton-solid.saltButton-neutral {
+  background-color: var(--bs-primary, #0d6efd) !important;
+  border-color: var(--bs-primary, #0d6efd) !important;
+  color: #ffffff !important;
+  border-radius: var(--bs-border-radius, 0.375rem) !important;
+  padding: 0.375rem 0.75rem !important;
+  font-size: 0.875rem !important;
+  font-weight: 400 !important;
+  text-transform: none !important;
+}
+
+.salt-bootstrap-compat.saltDialog .saltButton.saltButton-secondary,
+.salt-bootstrap-compat.saltDialog .saltButton.saltButton-transparent.saltButton-neutral,
+.salt-bootstrap-compat .saltDialog .saltButton.saltButton-secondary,
+.salt-bootstrap-compat .saltDialog .saltButton.saltButton-transparent.saltButton-neutral {
+  background-color: var(--bs-secondary, #6c757d) !important;
+  border-color: var(--bs-secondary, #6c757d) !important;
+  color: #ffffff !important;
+  border-radius: var(--bs-border-radius, 0.375rem) !important;
+  padding: 0.375rem 0.75rem !important;
+  font-size: 0.875rem !important;
+  font-weight: 400 !important;
+  text-transform: none !important;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+ * TOOLTIP & SLIDER (Match Bootstrap .tooltip & .form-range)
+ * ══════════════════════════════════════════════════════════════════ */
+.salt-bootstrap-compat .saltTooltip {
+  background-color: var(--bs-emphasis-color, #000000);
+  color: #ffffff;
+  border-radius: var(--bs-border-radius-sm, 0.25rem);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8125rem;
+  font-family: var(--bs-body-font-family);
+}
+
+.salt-bootstrap-compat .saltSlider-track {
+  background-color: var(--bs-secondary-bg, #dee2e6);
+  border-radius: 1rem;
+}
+
+.salt-bootstrap-compat .saltSlider-trackFill {
+  background-color: var(--bs-primary, #0d6efd);
+}
+
+.salt-bootstrap-compat .saltSlider-thumb {
+  background-color: var(--bs-primary, #0d6efd);
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+}
+
+/* ══════════════════════════════════════════════════════════════════
+ * MODAL SCRIM & DIALOG CLOSE (Match Bootstrap .modal-backdrop & .btn-close only with bridge)
+ * ══════════════════════════════════════════════════════════════════ */
+.salt-bootstrap-compat .saltScrim,
+.salt-bootstrap-compat.saltScrim,
+body:has(.salt-bootstrap-compat.saltDialog) .saltScrim,
+body:has(.salt-bootstrap-compat) .saltScrim {
+  background: rgba(0, 0, 0, 0.5) !important;
+  backdrop-filter: blur(1px);
+}
+
+.salt-bootstrap-compat.saltDialog .saltDialogCloseButton,
+.salt-bootstrap-compat .saltDialog .saltDialogCloseButton {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  opacity: 0.5;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  transition: opacity 0.15s ease-in-out;
+}
+
+.salt-bootstrap-compat.saltDialog .saltDialogCloseButton:hover,
+.salt-bootstrap-compat .saltDialog .saltDialogCloseButton:hover {
+  opacity: 1;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+ * PROGRESS BAR (Match Bootstrap .progress)
+ * ══════════════════════════════════════════════════════════════════ */
+.salt-bootstrap-compat .saltLinearProgress-progressLabel {
+  display: none !important;
+}
+
+.salt-bootstrap-compat .saltLinearProgress-track {
+  display: none !important;
+}
+
+.salt-bootstrap-compat .saltLinearProgress {
+  height: 0.5rem;
+  background-color: var(--bs-secondary-bg, #e9ecef);
+  border-radius: var(--bs-border-radius, 0.375rem);
+  overflow: hidden;
+}
+
+.salt-bootstrap-compat .saltLinearProgress-bar {
+  background-color: var(--bs-primary, #0d6efd) !important;
+  border-radius: var(--bs-border-radius, 0.375rem);
+}
+
+
+

@@ -1,0 +1,25 @@
+.salt-bootstrap-compat {
+  /* Error / Danger */
+  --salt-status-error-foreground:           var(--bs-danger, #dc3545);
+  --salt-status-error-background:           var(--bs-danger-bg-subtle, #f8d7da);
+  --salt-status-error-borderColor:          var(--bs-danger-border-subtle, #f5c2c7);
+  --salt-status-error-foreground-decorative: var(--bs-danger, #dc3545);
+
+  /* Warning */
+  --salt-status-warning-foreground:           var(--bs-warning, #ffc107);
+  --salt-status-warning-background:           var(--bs-warning-bg-subtle, #fff3cd);
+  --salt-status-warning-borderColor:          var(--bs-warning-border-subtle, #ffecb5);
+  --salt-status-warning-foreground-decorative: var(--bs-warning, #ffc107);
+
+  /* Success / Positive */
+  --salt-status-success-foreground:           var(--bs-success, #198754);
+  --salt-status-success-background:           var(--bs-success-bg-subtle, #d1e7dd);
+  --salt-status-success-borderColor:          var(--bs-success-border-subtle, #badbcc);
+  --salt-status-success-foreground-decorative: var(--bs-success, #198754);
+
+  /* Info */
+  --salt-status-info-foreground:            var(--bs-info, #0dcaf0);
+  --salt-status-info-background:            var(--bs-info-bg-subtle, #cff4fc);
+  --salt-status-info-borderColor:           var(--bs-info-border-subtle, #b6effb);
+  --salt-status-info-foreground-decorative:  var(--bs-info, #0dcaf0);
+}
