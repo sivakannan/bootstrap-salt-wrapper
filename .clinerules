@@ -1,0 +1,33 @@
+# Roo Code / Cline Rules for Bootstrap-Salt Wrapper Monorepo
+
+## Project Architecture
+- **Host Application**: `packages/bootstrap-host` (Port 3000) — Native Bootstrap 5.3.
+- **Salt MFE**: `packages/salt-mfe` (Port 3001) — J.P. Morgan Salt Design System (`@salt-ds/core` v1.71).
+- **Federation Bridge**: Remote entry `SaltWidget.tsx` wraps `SaltMicrofrontend.tsx` and passes `compatMode` to apply `.salt-bootstrap-compat`.
+
+## Non-Negotiable Operational Constraints
+1. **Dual-Mode Isolation**:
+   - `http://localhost:3001/` must remain pure native Salt DS.
+   - `http://localhost:3000/` adopts Bootstrap 5 styling.
+   - Any bridge CSS edits MUST NOT bleed into standalone mode on Port 3001.
+
+2. **CSS Bridge Scoping**:
+   - In `packages/salt-mfe/src/styles/salt-bootstrap-bridge/_component-overrides.css`, ALL selectors MUST be scoped under `.salt-bootstrap-compat`.
+   - Never use unscoped `.saltDialog`, `.saltButton`, or `.saltScrim`.
+
+3. **Portaled Elements**:
+   - `<Dialog>` is rendered via React Portal on `document.body`.
+   - Must use dynamic className: `<Dialog className={compatMode ? "salt-bootstrap-compat" : undefined}>`.
+   - Modal scrim must be styled via `body:has(.salt-bootstrap-compat.saltDialog) .saltScrim`.
+
+4. **Salt Table Classes**:
+   - `@salt-ds/core` renders `.saltTable-th`, `.saltTable-td`, `.saltTable-tr`.
+
+5. **Accordion Styling**:
+   - Expanded state is `.saltAccordionHeader[aria-expanded="true"]`.
+
+## Standard Commands
+- Development: `npm start` (Runs preview on 3001 and dev on 3000)
+- Build: `npm run build`
+- Parity Testing: `npm test`
+- Granular Verification: `npm run test:features`

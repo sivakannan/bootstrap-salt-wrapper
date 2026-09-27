@@ -1,0 +1,13 @@
+# Cursor Rules for Bootstrap-Salt Wrapper Monorepo
+
+## Core Context
+- Monorepo using npm workspaces: `packages/bootstrap-host` (Port 3000) and `packages/salt-mfe` (Port 3001).
+- Technology stack: React 19, TypeScript, Vite Module Federation (`@originjs/vite-plugin-federation`), Bootstrap 5.3, Salt Design System (`@salt-ds/core` v1.71).
+
+## Critical Guidelines
+1. Dual-Mode execution: Port 3001 is Pure Salt DS; Port 3000 is Bootstrap-adapted Salt DS.
+2. CSS Bridge: All rules in `_component-overrides.css` MUST be scoped to `.salt-bootstrap-compat`.
+3. Portaled Dialogs: Must receive dynamic `className={compatMode ? "salt-bootstrap-compat" : undefined}` because modals mount onto `document.body`.
+4. Salt Tables: Selectors must target `.saltTable-th, .saltTable-td, .saltTable-tr` and raw tags.
+5. Accordions: Expanded header is `.saltAccordionHeader[aria-expanded="true"]` (`#cfe2ff` bg, `#052c65` color).
+6. Testing: Always verify with `npm test` after modifying styles or components.

@@ -8,6 +8,13 @@ This directory contains comprehensive architectural reference guides, token docu
 
 ## 📑 Knowledge Guides
 
+### 🤖 [AI Developer & Engineering Handbook](./AI_DEVELOPER_HANDBOOK.md)
+**Essential reading for AI coding assistants (Copilot, Roo Code, Cline, Cursor) and human engineers:**
+- High-level directory & file map
+- The 5 non-negotiable rules of the codebase
+- How to add new components to the showcase
+- Common tasks and CLI recipes
+
 ### 1. 📘 [Bootstrap 5 Design System Guide](./bootstrap-design-system.md)
 Detailed architecture of Bootstrap 5.3+:
 - Core design tokens (`--bs-*`)
